@@ -1,3 +1,4 @@
+const connect = require('./client');
 const net = require("net");
 
 // establishes a connection with the game server
@@ -15,7 +16,3 @@ const connect = function () {
 
 console.log("Connecting ...");
 connect();
-
-conn.on("connect", () => {
-  // code that does something when the connection is first established
-});
