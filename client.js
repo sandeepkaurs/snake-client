@@ -1,5 +1,7 @@
 conn.on("connect", () => {
-  // code that does something when the connection is first established
+  console.log("Successfully connected to game server");
+  conn.write('Name: SKS');
 });
+
 
 module.exports(client)
