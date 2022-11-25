@@ -5,6 +5,8 @@ const moveUp = "w";
 const moveDown = "s";
 const moveLeft = "a";
 const moveRight = "d";
+const messages = {'1': 'Say: Slytherinnn'
+};
 
 const handleUserInput = function(key) {
   console.log("pressed", key)
@@ -20,7 +22,10 @@ const handleUserInput = function(key) {
   if (key === moveRight) {
     connection.write('Move: right');
   }
-}
+  if (messages[key]) {
+    connection.write(messages[key]);
+  }
+};
 
 const setupInput = (conn) => {
   connection = conn;
